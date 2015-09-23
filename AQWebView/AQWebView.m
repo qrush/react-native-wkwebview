@@ -5,13 +5,14 @@
 
 // lots of code from https://github.com/facebook/react-native/blob/master/React/Views/RCTWebView.m
 
-@interface AQWebView () <RCTAutoInsetsProtocol>
+@interface AQWebView () <RCTAutoInsetsProtocol, WKNavigationDelegate>
 @end
 
 @implementation AQWebView
 {
     WKWebView *_webView;
     UIRefreshControl *_refreshControl;
+    UIActivityIndicatorView *_spinner;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -22,11 +23,33 @@
         _contentInset = UIEdgeInsetsZero;
 
         _webView = [[WKWebView alloc] initWithFrame:self.bounds];
+        _webView.navigationDelegate = self;
         [self addSubview:_webView];
 
         _refreshControl = [[UIRefreshControl alloc] init];
         [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
         [_webView.scrollView addSubview:_refreshControl];
+
+        _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [_spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [_spinner startAnimating];
+        [_webView addSubview:_spinner];
+
+        [_webView addConstraint:[NSLayoutConstraint constraintWithItem:_spinner
+                                                             attribute:NSLayoutAttributeCenterX
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:_webView
+                                                             attribute:NSLayoutAttributeCenterX
+                                                            multiplier:1
+                                                              constant:0]];
+
+        [_webView addConstraint:[NSLayoutConstraint constraintWithItem:_spinner
+                                                             attribute:NSLayoutAttributeCenterY
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:_webView
+                                                             attribute:NSLayoutAttributeCenterY
+                                                            multiplier:1
+                                                              constant:0]];
     }
     return self;
 }
@@ -77,6 +100,14 @@
     [RCTView autoAdjustInsetsForView:self
                       withScrollView:_webView.scrollView
                         updateOffset:YES];
+}
+
+#pragma mark - WKNavigationDelegate
+
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
+    [_spinner stopAnimating];
+    [_refreshControl endRefreshing];
 }
 
 @end
