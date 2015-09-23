@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B461C611BB2360700A57DA9 /* AQWebViewManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B461C601BB2360700A57DA9 /* AQWebViewManager.h */; };
+		1B461C631BB2360700A57DA9 /* AQWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B461C621BB2360700A57DA9 /* AQWebViewManager.m */; };
+		1B461C6A1BB2366900A57DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B461C691BB2366900A57DA9 /* UIKit.framework */; };
+		1B461C6C1BB2367C00A57DA9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B461C6B1BB2367C00A57DA9 /* WebKit.framework */; };
+		1B461C6F1BB23EBF00A57DA9 /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B461C6E1BB23EBF00A57DA9 /* AQWebView.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B461C5B1BB2360700A57DA9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				1B461C611BB2360700A57DA9 /* AQWebViewManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B461C5D1BB2360700A57DA9 /* libAQWebView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAQWebView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B461C601BB2360700A57DA9 /* AQWebViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQWebViewManager.h; sourceTree = "<group>"; };
+		1B461C621BB2360700A57DA9 /* AQWebViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AQWebViewManager.m; sourceTree = "<group>"; };
+		1B461C691BB2366900A57DA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B461C6B1BB2367C00A57DA9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1B461C6D1BB23EBF00A57DA9 /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
+		1B461C6E1BB23EBF00A57DA9 /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B461C5A1BB2360700A57DA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B461C6C1BB2367C00A57DA9 /* WebKit.framework in Frameworks */,
+				1B461C6A1BB2366900A57DA9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B461C541BB2360700A57DA9 = {
+			isa = PBXGroup;
+			children = (
+				1B461C6B1BB2367C00A57DA9 /* WebKit.framework */,
+				1B461C691BB2366900A57DA9 /* UIKit.framework */,
+				1B461C5F1BB2360700A57DA9 /* AQWebView */,
+				1B461C5E1BB2360700A57DA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B461C5E1BB2360700A57DA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B461C5D1BB2360700A57DA9 /* libAQWebView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B461C5F1BB2360700A57DA9 /* AQWebView */ = {
+			isa = PBXGroup;
+			children = (
+				1B461C601BB2360700A57DA9 /* AQWebViewManager.h */,
+				1B461C621BB2360700A57DA9 /* AQWebViewManager.m */,
+				1B461C6D1BB23EBF00A57DA9 /* AQWebView.h */,
+				1B461C6E1BB23EBF00A57DA9 /* AQWebView.m */,
+			);
+			path = AQWebView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B461C5C1BB2360700A57DA9 /* AQWebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B461C661BB2360700A57DA9 /* Build configuration list for PBXNativeTarget "AQWebView" */;
+			buildPhases = (
+				1B461C591BB2360700A57DA9 /* Sources */,
+				1B461C5A1BB2360700A57DA9 /* Frameworks */,
+				1B461C5B1BB2360700A57DA9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AQWebView;
+			productName = AQWebView;
+			productReference = 1B461C5D1BB2360700A57DA9 /* libAQWebView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B461C551BB2360700A57DA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Aqueous;
+				TargetAttributes = {
+					1B461C5C1BB2360700A57DA9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 1B461C581BB2360700A57DA9 /* Build configuration list for PBXProject "AQWebView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B461C541BB2360700A57DA9;
+			productRefGroup = 1B461C5E1BB2360700A57DA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B461C5C1BB2360700A57DA9 /* AQWebView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B461C591BB2360700A57DA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B461C631BB2360700A57DA9 /* AQWebViewManager.m in Sources */,
+				1B461C6F1BB23EBF00A57DA9 /* AQWebView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1B461C641BB2360700A57DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1B461C651BB2360700A57DA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B461C671BB2360700A57DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1B461C681BB2360700A57DA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B461C581BB2360700A57DA9 /* Build configuration list for PBXProject "AQWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B461C641BB2360700A57DA9 /* Debug */,
+				1B461C651BB2360700A57DA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B461C661BB2360700A57DA9 /* Build configuration list for PBXNativeTarget "AQWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B461C671BB2360700A57DA9 /* Debug */,
+				1B461C681BB2360700A57DA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B461C551BB2360700A57DA9 /* Project object */;
+}

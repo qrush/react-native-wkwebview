@@ -1,0 +1,32 @@
+{
+  "name": "react-native-wkwebview",
+  "version": "0.1.3",
+  "description": "React Native Module for WKWebView",
+  "main": "AQWebView.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:qrush/react-native-wkwebview.git"
+  },
+  "files": [
+    "AQWebView.xcodeproj",
+    "AQWebView/AQWebView.h",
+    "AQWebView/AQWebView.m",
+    "AQWebView/AQWebViewManager.h",
+    "AQWebView/AQWebViewManager.m",
+    "AQWebView.js",
+    "README.md"
+  ],
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "webview",
+    "uiwebview",
+    "wkwebview"
+  ],
+  "author": "Nick Quaranto <nick@quaran.to>",
+  "license": "MIT",
+  "dependencies": {
+    "react-native": "< 1"
+  }
+}
