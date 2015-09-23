@@ -1,6 +1,6 @@
 {
   "name": "react-native-wkwebview",
-  "version": "0.1.3",
+  "version": "0.0.1",
   "description": "React Native Module for WKWebView",
   "main": "AQWebView.js",
   "repository": {
