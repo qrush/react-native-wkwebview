@@ -11,7 +11,6 @@
 @implementation AQWebView
 {
     WKWebView *_webView;
-    UIRefreshControl *_refreshControl;
     UIActivityIndicatorView *_spinner;
 }
 
@@ -25,10 +24,6 @@
         _webView = [[WKWebView alloc] initWithFrame:self.bounds];
         _webView.navigationDelegate = self;
         [self addSubview:_webView];
-
-        _refreshControl = [[UIRefreshControl alloc] init];
-        [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
-        [_webView.scrollView addSubview:_refreshControl];
 
         _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [_spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -107,7 +102,6 @@
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     [_spinner stopAnimating];
-    [_refreshControl endRefreshing];
 }
 
 @end
