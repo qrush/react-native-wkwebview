@@ -11,7 +11,7 @@ class WKWebView extends React.Component {
 
 WKWebView.propTypes = {
   url: React.PropTypes.string,
-  automaticallyAdjustContentInsets: PropTypes.bool,
+  automaticallyAdjustContentInsets: React.PropTypes.bool,
   contentInset: EdgeInsetsPropType,
 };
 
