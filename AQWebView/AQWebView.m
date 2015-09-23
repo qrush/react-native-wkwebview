@@ -1,4 +1,5 @@
 #import <WebKit/WebKit.h>
+#import <UIKit/UIKit.h>
 #import "AQWebView.h"
 #import "RCTAutoInsetsProtocol.h"
 
@@ -10,6 +11,7 @@
 @implementation AQWebView
 {
     WKWebView *_webView;
+    UIRefreshControl *_refreshControl;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -21,6 +23,10 @@
 
         _webView = [[WKWebView alloc] initWithFrame:self.bounds];
         [self addSubview:_webView];
+
+        _refreshControl = [[UIRefreshControl alloc] init];
+        [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
+        [_webView.scrollView addSubview:_refreshControl];
     }
     return self;
 }
