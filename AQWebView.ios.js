@@ -11,10 +11,10 @@ WKWebView.propTypes = {
   url: React.PropTypes.string,
   automaticallyAdjustContentInsets: React.PropTypes.bool,
   contentInset: React.PropTypes.shape({
-     top: React.PropTypes.number,
-     left: React.PropTypes.number,
-     bottom: React.PropTypes.number,
-     right: React.PropTypes.number
+    top: React.PropTypes.number,
+    left: React.PropTypes.number,
+    bottom: React.PropTypes.number,
+    right: React.PropTypes.number
   }),
 };
 
