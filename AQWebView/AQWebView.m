@@ -12,6 +12,7 @@
 {
     WKWebView *_webView;
     UIActivityIndicatorView *_spinner;
+    UIRefreshControl *_refreshControl;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -22,6 +23,8 @@
         _contentInset = UIEdgeInsetsZero;
 
         _webView = [[WKWebView alloc] initWithFrame:self.bounds];
+        _webView.allowsBackForwardNavigationGestures = YES;
+        _webView.allowsLinkPreview = YES;
         _webView.navigationDelegate = self;
         [self addSubview:_webView];
 
@@ -29,6 +32,10 @@
         [_spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_spinner startAnimating];
         [_webView addSubview:_spinner];
+
+        _refreshControl = [[UIRefreshControl alloc] init];
+        [_webView.scrollView addSubview:_refreshControl];
+        [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
 
         [_webView addConstraint:[NSLayoutConstraint constraintWithItem:_spinner
                                                              attribute:NSLayoutAttributeCenterX
@@ -51,7 +58,7 @@
 
 - (void)reload
 {
-    [_webView reload];
+    [_webView loadRequest:[NSURLRequest requestWithURL:_webView.URL]];
 }
 
 - (NSURL *)URL
@@ -102,6 +109,7 @@
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     [_spinner stopAnimating];
+    [_refreshControl endRefreshing];
 }
 
 @end
