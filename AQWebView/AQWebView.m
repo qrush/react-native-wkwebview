@@ -1,7 +1,11 @@
-#import "AQWebView.h"
 #import <WebKit/WebKit.h>
+#import "AQWebView.h"
+#import "RCTAutoInsetsProtocol.h"
 
 // lots of code from https://github.com/facebook/react-native/blob/master/React/Views/RCTWebView.m
+
+@interface AQWebView () <RCTAutoInsetsProtocol>
+@end
 
 @implementation AQWebView
 {
@@ -12,6 +16,9 @@
 {
     if ((self = [super initWithFrame:frame])) {
         super.backgroundColor = [UIColor clearColor];
+        _automaticallyAdjustContentInsets = YES;
+        _contentInset = UIEdgeInsetsZero;
+
         _webView = [[WKWebView alloc] initWithFrame:self.bounds];
         [self addSubview:_webView];
     }
@@ -37,6 +44,33 @@
 {
     [super layoutSubviews];
     _webView.frame = self.bounds;
+}
+
+- (void)setContentInset:(UIEdgeInsets)contentInset
+{
+    _contentInset = contentInset;
+    [RCTView autoAdjustInsetsForView:self
+                      withScrollView:_webView.scrollView
+                        updateOffset:NO];
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    CGFloat alpha = CGColorGetAlpha(backgroundColor.CGColor);
+    self.opaque = _webView.opaque = (alpha == 1.0);
+    _webView.backgroundColor = backgroundColor;
+}
+
+- (UIColor *)backgroundColor
+{
+    return _webView.backgroundColor;
+}
+
+- (void)refreshContentInset
+{
+    [RCTView autoAdjustInsetsForView:self
+                      withScrollView:_webView.scrollView
+                        updateOffset:YES];
 }
 
 @end
