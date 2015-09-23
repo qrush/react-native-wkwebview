@@ -1,8 +1,6 @@
 var React = require('react-native');
 var { requireNativeComponent } = React;
 
-var EdgeInsetsPropType = require('EdgeInsetsPropType');
-
 class WKWebView extends React.Component {
   render() {
     return <AQWebView {...this.props} />;
@@ -12,7 +10,12 @@ class WKWebView extends React.Component {
 WKWebView.propTypes = {
   url: React.PropTypes.string,
   automaticallyAdjustContentInsets: React.PropTypes.bool,
-  contentInset: EdgeInsetsPropType,
+  contentInset: React.PropTypes.shape({
+     top: React.PropTypes.number,
+     left: React.PropTypes.number,
+     bottom: React.PropTypes.number,
+     right: React.PropTypes.number
+  }),
 };
 
 var AQWebView = requireNativeComponent('AQWebView', WKWebView);
