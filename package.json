@@ -13,7 +13,7 @@
     "AQWebView/AQWebView.m",
     "AQWebView/AQWebViewManager.h",
     "AQWebView/AQWebViewManager.m",
-    "AQWebView.js",
+    "AQWebView.ios.js",
     "README.md"
   ],
   "keywords": [
